@@ -103,8 +103,8 @@ a:hover {
   }
 
 .hero .description {
-  width: 75ch;
-  max-width: 100%;
+  max-width: 75ch;
+  width: 100%;
   font-size: 1.1rem;
   color: var(--dark-grey);
   line-height: 1.4;
