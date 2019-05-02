@@ -208,14 +208,14 @@ a:hover {
 }
 
 @font-face {
-  font-family: "Google Sans";
+  font-family: 'Google Sans';
   font-weight: normal;
   font-display: fallback;
-  src: local("Google Sans"), url("../assets/fonts/GoogleSans-Regular.ttf");
+  src: local('Google Sans'), url('../assets/fonts/GoogleSans-Regular.ttf');
 }
 @font-face {
-  font-family: "Google Sans";
+  font-family: 'Google Sans';
   font-weight: 800;
   font-display: fallback;
-  src: local("Google Sans"), url("../assets/fonts/GoogleSans-Bold.ttf");
+  src: local('Google Sans'), url('../assets/fonts/GoogleSans-Bold.ttf');
 }
