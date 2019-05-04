@@ -22,7 +22,6 @@ export class GDGEvents extends React.Component {
     fetch(MEETUP_DATA_ENDPOINT)
       .then(response => response.json())
       .then(data => {
-        console.log('DATA: ', data)
         this.setState({
           upcomingEvents: data,
         })
