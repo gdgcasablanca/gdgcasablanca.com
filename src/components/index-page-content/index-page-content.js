@@ -32,7 +32,7 @@ export const IndexPageContent = () => {
         </div>
       </BaseSection>
       <GDGEvents />
-      <BaseSection sectionTitle="Contact.">
+      <BaseSection sectionTitle="Contact." classNames="contact" id="Contact">
         <p class="p">
           Contact us via email:&nbsp;
           <a href="mailto:contact.gdgcasablanca@gmail.com">
