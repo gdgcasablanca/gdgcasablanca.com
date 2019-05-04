@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { BaseSection } from '../base-section/base-section'
+import { BaseSection } from '../../../base-section/base-section'
 import { EventCard } from './event-card/event-card'
 import './gdg-events.css'
 
