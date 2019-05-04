@@ -1,0 +1,13 @@
+.section {
+  padding: 5rem 0 4rem;
+}
+.section-bg {
+  background-color: var(--light-grey);
+}
+.section .heading {
+  margin: 0;
+  margin-bottom: 1.2rem;
+  color: var(--dark-grey);
+  font-size: 2.6rem;
+  font-weight: bold;
+}
