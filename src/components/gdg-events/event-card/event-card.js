@@ -8,19 +8,19 @@ export const EventCard = ({
   date,
   eventLink,
   timeFrom,
-  timeTo,
+  // timeTo,
   location,
 }) => (
-  <div class="event-card">
-    <h3 class="title">{title}</h3>
-    <ul class="details">
+  <div className="event-card">
+    <h3 className="title">{title}</h3>
+    <ul className="details">
       <li>
         <CalendarToday className="material-icons" />
         {date}
       </li>
       <li>
         <AccessTime className="material-icons" />
-        {`${timeFrom} to ${timeTo}`}
+        {`Event starts at ${timeFrom}`}
       </li>
       <li>
         <PinDrop className="material-icons" />
@@ -28,12 +28,12 @@ export const EventCard = ({
       </li>
     </ul>
     <a
-      class="more-link"
+      className="more-link"
       href={eventLink}
       target="_blank"
       rel="noopener noreferrer"
     >
-      Check Event page
+      Check Event Page
     </a>
   </div>
 )
