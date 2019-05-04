@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `GDG Casablanca`,
+    description: `Google Developer Groups of Casablanca City is for developers who are interested in Google's developer technology, everything from Android, App Engine, and Google Chrome platforms, to product APIs like the Maps API, YouTube API and Google Calendar API.`,
+    author: `@GDGCasablanca`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
