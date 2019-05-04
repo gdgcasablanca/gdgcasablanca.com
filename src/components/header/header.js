@@ -5,7 +5,7 @@ import GDGCasaLogo from '../../images/logo-gdg.svg'
 import WTMCasaLogo from '../../images/logo-wtm.svg'
 import './header.css'
 
-const Header = ({ siteTitle }) => (
+export const Header = ({ siteTitle }) => (
   <header>
     <nav class="nav">
       <div class="container">
@@ -44,5 +44,3 @@ Header.propTypes = {
 Header.defaultProps = {
   siteTitle: `GDG & WTM Casablanca`,
 }
-
-export default Header
