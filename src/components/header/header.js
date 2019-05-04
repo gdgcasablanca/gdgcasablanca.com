@@ -6,7 +6,7 @@ import WTMCasaLogo from '../../images/logo-wtm.svg'
 import './header.css'
 
 export const Header = ({ siteTitle }) => (
-  <header>
+  <header className="header">
     <nav class="nav">
       <div class="container">
         <a href="/" class="logo logo-gdg">

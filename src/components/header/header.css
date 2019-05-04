@@ -13,7 +13,7 @@
   padding-bottom: 1rem;
 }
 @media (min-width: 768px) {
-  .nav {
+  .header {
     position: sticky;
     top: 0;
   }
