@@ -4,13 +4,13 @@ import './footer.css'
 
 export const Footer = () => {
   return (
-    <footer class="footer">
-      <div class="container">
-        <h1 class="organizer">GDG Casablanca</h1>
-        <nav class="links">
+    <footer className="footer">
+      <div className="container">
+        <h1 className="organizer">GDG Casablanca</h1>
+        <nav className="links">
           <a
             href="https://www.meetup.com/GDGCasablanca/"
-            class="link"
+            className="link"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -18,7 +18,7 @@ export const Footer = () => {
           </a>
           <a
             href="https://www.twitter.com/GDGCasablanca/"
-            class="link"
+            className="link"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -26,7 +26,7 @@ export const Footer = () => {
           </a>
           <a
             href="https://www.facebook.com/GDGCasa/"
-            class="link"
+            className="link"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -34,7 +34,7 @@ export const Footer = () => {
           </a>
           <a
             href="https://www.linkedin.com/company/GDGCasablanca/"
-            class="link"
+            className="link"
             target="_blank"
             rel="noopener noreferrer"
           >
