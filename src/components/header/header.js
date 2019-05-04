@@ -7,13 +7,13 @@ import './header.css'
 
 export const Header = ({ siteTitle }) => (
   <header className="header">
-    <nav class="nav">
-      <div class="container">
-        <a href="/" class="logo logo-gdg">
+    <nav className="nav">
+      <div className="container">
+        <a href="/" className="logo logo-gdg">
           <img src={GDGCasaLogo} alt={siteTitle} />
         </a>
 
-        <div class="nav-links">
+        <div className="nav-links">
           <a href="#Home">Home</a>
           <a href="#Events">Events</a>
           <a href="#Contact">Contact</a>
@@ -23,7 +23,7 @@ export const Header = ({ siteTitle }) => (
 
         <a
           href="https://wtm.gdgcasablanca.com"
-          class="logo logo-wtm"
+          className="logo logo-wtm"
           target="_blank"
           rel="noopener noreferrer"
         >
