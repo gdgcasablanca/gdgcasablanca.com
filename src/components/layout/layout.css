@@ -74,7 +74,7 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
   padding: var(--padding);
 }
 .nav > .container > *:not(:last-child) {
