@@ -4,43 +4,84 @@ import { BaseSection } from '../base-section/base-section'
 import { EventCard } from './event-card/event-card'
 import './gdg-events.css'
 
-const DB_ENDPOINT = 'https://gdgcasablanca-website.firebaseio.com/events.json'
+const MEETUP_ENDPOINT =
+  'https://api.meetup.com/gdgcasablanca/events?&photo-host=public&page=20'
+const PROXY_URL = 'https://oh-cors-anywhere.herokuapp.com/'
+const MEETUP_DATA_ENDPOINT = PROXY_URL + MEETUP_ENDPOINT
 
 export class GDGEvents extends React.Component {
   constructor() {
     super()
 
     this.state = {
-      allEvent: [],
+      upcomingEvents: [],
     }
   }
 
   componentDidMount() {
-    fetch(DB_ENDPOINT)
+    fetch(MEETUP_DATA_ENDPOINT)
       .then(response => response.json())
-      .then(events => {
-        this.setState({ allEvent: events })
+      .then(data => {
+        console.log('DATA: ', data)
+        this.setState({
+          upcomingEvents: data,
+        })
       })
+      .catch(err => console.log(err))
   }
 
   render() {
-    console.log(this.state.allEvent)
     return (
       <BaseSection
-        sectionTitle="Planned Events."
+        SectionTitle={() => (
+          <>
+            Planned <span className="pColor">Events</span>.
+          </>
+        )}
         classNames="section-bg"
         id="Events"
       >
-        <div class="event-cards">
-          {this.state.allEvent.map(event => (
-            <EventCard {...event} />
-          ))}
+        <div className="event-cards">
+          {this.state.upcomingEvents.map((eventData, index) => {
+            const months = [
+              'January',
+              'February',
+              'March',
+              'April',
+              'May',
+              'June',
+              'July',
+              'August',
+              'September',
+              'October',
+              'November',
+              'December',
+            ]
+            const eventDate = new Date(eventData.local_date)
+            const date = `${
+              months[eventDate.getMonth()]
+            } ${eventDate.getDate()}, ${eventDate.getFullYear()}`
+
+            const event = {
+              title: eventData.name || '',
+              date: date || '',
+              eventLink: eventData.link || '',
+              timeFrom: eventData.local_time || '',
+              timeTo: '',
+              location:
+                (eventData.venue &&
+                  `${eventData.venue.name}, ${eventData.venue.city}`) ||
+                'Soon ...',
+            }
+
+            return <EventCard key={String(index)} {...event} />
+          })}
         </div>
         <a
-          href="https://www.meetup.com/GDGCasablanca/"
+          href="https://www.meetup.com/GDGCasablanca/events/"
           rel="noopener noreferrer"
           target="_blank"
-          class="see-all-link"
+          className="see-all-link"
         >
           See All GDG Casablanca Events
         </a>
