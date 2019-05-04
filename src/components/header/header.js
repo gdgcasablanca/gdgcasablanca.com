@@ -1,33 +1,39 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import PropTypes from 'prop-types'
+import React from 'react'
+
+import GDGCasaLogo from '../../images/logo-gdg.svg'
+import WTMCasaLogo from '../../images/logo-wtm.svg'
+import './header.css'
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
+  <header>
+    <nav class="nav">
+      <div class="container">
+        <a href="/" class="logo logo-gdg">
+          <img src={GDGCasaLogo} alt={siteTitle} />
+        </a>
+
+        <div class="nav-links">
+          <a href="#Home">Home</a>
+          <a href="#Events">Events</a>
+          <a href="#Contact">Contact</a>
+          {/* <a href="#!">Team</a>
+          <a href="#!">About</a>  */}
+        </div>
+
+        <a
+          href="https://wtm.gdgcasablanca.com"
+          class="logo logo-wtm"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
+          <img
+            src={WTMCasaLogo}
+            alt="WTM Casablanca. Connect. Create. Celebrate."
+          />
+        </a>
+      </div>
+    </nav>
   </header>
 )
 
@@ -36,7 +42,7 @@ Header.propTypes = {
 }
 
 Header.defaultProps = {
-  siteTitle: ``,
+  siteTitle: `GDG & WTM Casablanca`,
 }
 
 export default Header
