@@ -15,3 +15,19 @@
   margin-top: 2rem;
   display: inline-block;
 }
+
+.animate-spin {
+  animation: spin 2s infinite linear forwards;
+  color: var(--dark-grey, #3c4043);
+  height: 32px !important;
+  width: auto !important;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}

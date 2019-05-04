@@ -1,4 +1,5 @@
 import React from 'react'
+import { Cached } from '@material-ui/icons'
 
 import { BaseSection } from '../../../base-section/base-section'
 import { EventCard } from './event-card/event-card'
@@ -15,6 +16,7 @@ export class GDGEvents extends React.Component {
 
     this.state = {
       upcomingEvents: [],
+      loading: true,
     }
   }
 
@@ -22,14 +24,21 @@ export class GDGEvents extends React.Component {
     fetch(MEETUP_DATA_ENDPOINT)
       .then(response => response.json())
       .then(data => {
-        this.setState({
-          upcomingEvents: data,
-        })
+        this.setState(
+          {
+            upcomingEvents: data,
+          },
+          () =>
+            this.setState({
+              loading: false,
+            })
+        )
       })
       .catch(err => console.log(err))
   }
 
   render() {
+    const { loading, upcomingEvents } = this.state
     return (
       <BaseSection
         SectionTitle={() => (
@@ -41,40 +50,44 @@ export class GDGEvents extends React.Component {
         id="Events"
       >
         <div className="event-cards">
-          {this.state.upcomingEvents.map((eventData, index) => {
-            const months = [
-              'January',
-              'February',
-              'March',
-              'April',
-              'May',
-              'June',
-              'July',
-              'August',
-              'September',
-              'October',
-              'November',
-              'December',
-            ]
-            const eventDate = new Date(eventData.local_date)
-            const date = `${
-              months[eventDate.getMonth()]
-            } ${eventDate.getDate()}, ${eventDate.getFullYear()}`
+          {loading ? (
+            <Cached className="animate-spin" />
+          ) : (
+            upcomingEvents.map((eventData, index) => {
+              const months = [
+                'January',
+                'February',
+                'March',
+                'April',
+                'May',
+                'June',
+                'July',
+                'August',
+                'September',
+                'October',
+                'November',
+                'December',
+              ]
+              const eventDate = new Date(eventData.local_date)
+              const date = `${
+                months[eventDate.getMonth()]
+              } ${eventDate.getDate()}, ${eventDate.getFullYear()}`
 
-            const event = {
-              title: eventData.name || '',
-              date: date || '',
-              eventLink: eventData.link || '',
-              timeFrom: eventData.local_time || '',
-              timeTo: '',
-              location:
-                (eventData.venue &&
-                  `${eventData.venue.name}, ${eventData.venue.city}`) ||
-                'Soon ...',
-            }
+              const event = {
+                title: eventData.name || '',
+                date: date || '',
+                eventLink: eventData.link || '',
+                timeFrom: eventData.local_time || '',
+                timeTo: '',
+                location:
+                  (eventData.venue &&
+                    `${eventData.venue.name}, ${eventData.venue.city}`) ||
+                  'Soon ...',
+              }
 
-            return <EventCard key={String(index)} {...event} />
-          })}
+              return <EventCard key={String(index)} {...event} />
+            })
+          )}
         </div>
         <a
           href="https://www.meetup.com/GDGCasablanca/events/"
