@@ -7,22 +7,26 @@ export const IndexPageContent = () => {
   return (
     <>
       <BaseSection
-        sectionTitle={`Be a hero. Be a <span className='pColor'>GDG</span>.`}
+        SectionTitle={() => (
+          <>
+            Be a hero. Be a <span className="pColor">GDG</span>.
+          </>
+        )}
         classNames="hero"
         id="Home"
       >
-        <p class="description">
+        <p className="description">
           Welcome to GDG Casablanca. Google Developer Groups of Casablanca City
           is for developers who are interested in Google's developer technology,
           everything from Android, App Engine, and Google Chrome platforms, to
           product APIs like the Maps API, YouTube API and Google Calendar API.
         </p>
-        <p class="hashtags">
+        <p className="hashtags">
           #GDGCasablanca &nbsp; #WTMCasablanca &nbsp; #GDG &nbsp; #WTM
         </p>
-        <div class="action-btns">
+        <div className="action-btns">
           <a
-            class="btn"
+            className="btn"
             href="https://www.meetup.com/GDGCasablanca/"
             target="_blank"
             rel="noopener noreferrer"
@@ -32,8 +36,12 @@ export const IndexPageContent = () => {
         </div>
       </BaseSection>
       <GDGEvents />
-      <BaseSection sectionTitle="Contact." classNames="contact" id="Contact">
-        <p class="p">
+      <BaseSection
+        SectionTitle={() => <>Contact.</>}
+        classNames="contact"
+        id="Contact"
+      >
+        <p className="p">
           Contact us via email: &nbsp;
           <a href="mailto:contact.gdgcasablanca@gmail.com">
             contact.gdgcasablanca@gmail.com

@@ -4,17 +4,16 @@ import './base-section.css'
 
 export const BaseSection = ({
   children,
-  sectionTitle,
+  SectionTitle,
   classNames = '',
   id,
 }) => {
   return (
     <section className={'section ' + classNames} id={id}>
       <div className="container">
-        <h1
-          className="heading"
-          dangerouslySetInnerHTML={{ __html: sectionTitle }}
-        />
+        <h1 className="heading">
+          <SectionTitle />
+        </h1>
         {children}
       </div>
     </section>
