@@ -24,7 +24,10 @@
     "prettier": "^1.17.0"
   },
   "keywords": [
-    "gatsby"
+    "gdg",
+    "gdgmena",
+    "GDG Casablanca",
+    "WTM Casablanca"
   ],
   "license": "MIT",
   "scripts": {
