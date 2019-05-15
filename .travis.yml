@@ -16,4 +16,5 @@ branches:
     - develop
 
 after_success:
+  - firebase use develop
   - firebase deploy --token $FIREBASE_TOKEN
