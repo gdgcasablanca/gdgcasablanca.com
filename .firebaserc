@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "gdgcasablanca-website"
+    "default": "gdgcasablanca-website",
+    "develop": "gdgcasablanca-website-dev"
   }
 }
