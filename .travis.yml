@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+  - "7"
+
+script:
+  - npm build
+
+install:
+  - npm i -g firebase-tools
+
+after_success:
+  - firebase --version
+  - echo $FIREBASE_TOKEN
