@@ -9,5 +9,4 @@ install:
   - npm i -g firebase-tools
 
 after_success:
-  - firebase --version
-  - echo $FIREBASE_TOKEN
+  - firebase deploy --token $FIREBASE_TOKEN

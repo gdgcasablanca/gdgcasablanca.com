@@ -10,8 +10,8 @@ export const ContactSection = () => (
   >
     <p className="p">
       Contact us via email: &nbsp;
-      <a href="mailto:contact.gdgcasablanca@gmail.com">
-        contact.gdgcasablanca@gmail.com
+      <a href="mailto:contact@gdgcasablanca.com">
+        contact@gdgcasablanca.com
       </a>
     </p>
   </BaseSection>
