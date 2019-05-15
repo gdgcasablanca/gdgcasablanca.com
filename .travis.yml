@@ -3,7 +3,7 @@ node_js:
   - "7"
 
 script:
-  - npm build
+  - npm run build
 
 install:
   - npm i -g firebase-tools
