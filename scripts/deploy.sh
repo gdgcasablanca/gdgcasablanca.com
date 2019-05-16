@@ -1,9 +1,7 @@
 #!/bin/bash
 
-echo 'DEPLOYING IN: '
-
-pwd
-ls -ail
+yarn
+yarn build
 
 if [ "$TRAVIS_BRANCH" = "develop" ]; then
   echo 'develop'
@@ -12,5 +10,8 @@ elif [ "$TRAVIS_BRANCH" = "master" ]; then
   echo 'master'
   firebase use default
 fi
+
+pwd
+ls -ail
 
 firebase deploy --token $FIREBASE_TOKEN
