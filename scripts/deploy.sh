@@ -7,7 +7,7 @@ firebase use develop
 if [ "$TRAVIS_BRANCH" = "develop" ]; then
   echo 'develop'
   firebase use develop
-elif [ "$TRAVIS_BRANCH" = "master" ]
+elif [ "$TRAVIS_BRANCH" = "master" ]; then
   echo 'master'
   firebase use default
 fi
