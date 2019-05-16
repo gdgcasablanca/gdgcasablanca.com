@@ -2,7 +2,8 @@
 
 echo 'DEPLOYING IN: '
 
-firebase use develop
+pwd
+ls
 
 if [ "$TRAVIS_BRANCH" = "develop" ]; then
   echo 'develop'
