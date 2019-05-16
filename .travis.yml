@@ -15,6 +15,9 @@ branches:
     - master
     - develop
 
-after_success:
-  - firebase use develop
-  - firebase deploy --token $FIREBASE_TOKEN
+deploy:
+  provider: script
+  script: bash scripts/deploy.sh
+# after_success:
+#   - firebase use develop
+#   - firebase deploy --token $FIREBASE_TOKEN
