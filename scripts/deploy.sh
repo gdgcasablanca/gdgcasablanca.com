@@ -3,7 +3,7 @@
 echo 'DEPLOYING IN: '
 
 pwd
-ls
+ls -ail
 
 if [ "$TRAVIS_BRANCH" = "develop" ]; then
   echo 'develop'
