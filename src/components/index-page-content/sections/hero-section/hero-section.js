@@ -23,7 +23,7 @@ export const HeroSection = () => (
     </p>
     <div className="action-btns">
       <a
-        className="btn"
+        className="btn lg"
         href="https://www.meetup.com/GDGCasablanca/"
         target="_blank"
         rel="noopener noreferrer"
