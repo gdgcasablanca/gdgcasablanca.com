@@ -14,10 +14,10 @@ branches:
   only:
     - master
     - develop
-
-deploy:
-  provider: script
-  script: bash scripts/deploy.sh
+jobs:
+  include:
+    - stage: deploy
+      script: bash scripts/deploy.sh
 # after_success:
 #   - firebase use develop
 #   - firebase deploy --token $FIREBASE_TOKEN
