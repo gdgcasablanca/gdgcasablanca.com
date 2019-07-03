@@ -1,5 +1,6 @@
-import PropTypes from 'prop-types'
 import React from 'react'
+import PropTypes from 'prop-types'
+import { Link } from 'gatsby'
 
 import GDGCasaLogo from '../../images/logo-gdg.svg'
 import WTMCasaLogo from '../../images/logo-wtm.svg'
@@ -14,11 +15,11 @@ export const Header = ({ siteTitle }) => (
         </a>
 
         <div className="nav-links">
-          <a href="#Home">Home</a>
+          <Link to="/">Home</Link>
           <a href="#Events">Events</a>
           <a href="#Contact">Contact</a>
-          {/* <a href="#!">Team</a>
-          <a href="#!">About</a>  */}
+          <Link to="/team">Team</Link>
+          {/* <a href="#!">About</a>  */}
         </div>
 
         <a
