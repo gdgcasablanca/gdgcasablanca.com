@@ -16,8 +16,8 @@ export const Header = ({ siteTitle }) => (
 
         <div className="nav-links">
           <Link to="/">Home</Link>
-          <a href="#Events">Events</a>
-          <a href="#Contact">Contact</a>
+          <Link to="/#Events">Events</Link>
+          <Link to="/#Contact">Contact</Link>
           <Link to="/team">Team</Link>
           {/* <a href="#!">About</a>  */}
         </div>

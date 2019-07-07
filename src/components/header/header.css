@@ -52,3 +52,10 @@
     display: flex;
   }
 }
+
+.nav-links a:focus,
+.nav-links a:active {
+  background-color: rgba(32, 33, 36, 0.05);
+  outline: 4px solid rgba(32, 33, 36, 0.05);
+  border-radius: 3px;
+}
