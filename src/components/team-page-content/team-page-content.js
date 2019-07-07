@@ -1,7 +1,8 @@
 import React from 'react'
 
 import { BaseSection } from '../base-section/base-section'
-import teamMembers from './team-members'
+import OrganizerList from '../organizer-list/organizer-list'
+import teamMembersData from './team-members-data'
 
 const TeamPageContent = () => {
   return (
@@ -11,7 +12,7 @@ const TeamPageContent = () => {
         classNames="contact"
         id="Contact"
       >
-        <div>{teamMembers.map(member => <h4>{member.name}</h4>)}</div>
+        <OrganizerList teamMembersData={teamMembersData} />
         <p className="p">
           Contact us via email: &nbsp;
           <a href="mailto:contact@gdgcasablanca.com">
