@@ -1,10 +1,55 @@
 import React from 'react'
 
+import Link from '../link/link'
 import './footer.css'
+
+const socialLinks = [
+  {
+    link: 'https://www.meetup.com/GDGCasablanca/',
+    label: 'Meetup',
+    external: true,
+  },
+  {
+    link: 'https://www.linkedin.com/company/gdgcasablanca/',
+    label: 'LinkedIn',
+    external: true,
+  },
+  {
+    link: 'https://twitter.com/gdgcasablanca',
+    label: 'Twitter',
+    external: true,
+  },
+  {
+    link: 'https://www.facebook.com/GDGCasa/',
+    label: 'Facebook',
+    external: true,
+  },
+]
+
+const aboutLinks = [
+  {
+    link: 'https://gdgcasablanca.com/',
+    label: 'GDG Casablanca',
+    external: true,
+  },
+  {
+    link: 'https://wtm.gdgcasablanca.com/',
+    label: 'WTM Casablanca',
+    external: true,
+  },
+]
+
+const partnersLinks = [
+  {
+    link: 'mailto:contactgdgcasablanca@gmail.com',
+    label: 'contactgdgcasablanca@gmail.com',
+    external: true,
+  },
+]
 
 export const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className="section footer">
       <div class="container">
         <div style={{ width: '100%' }}>
           <p class="small-text">Developer community</p>
@@ -13,79 +58,37 @@ export const Footer = () => {
             <div class="links-block">
               <h5>Socials</h5>
               <ul class="links-list">
-                <li>
-                  <a
-                    href="https://www.meetup.com/GDGCasablanca/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Meetup
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.linkedin.com/company/33208344/admin/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    LinkedIn
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://twitter.com/gdgcasablanca"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Twitter
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.facebook.com/GDGCasa/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Facebook
-                  </a>
-                </li>
+                {socialLinks.map(({ link, label, external }, index) => (
+                  <li key={index}>
+                    <Link to={link} external={external}>
+                      {label}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
             <div class="links-block">
               <h5>About</h5>
               <ul class="links-list">
-                <li>
-                  <a
-                    href="https://gdgcasablanca.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    GDG Casablanca
-                </a>
-                </li>
-                <li>
-                  <a
-                    href="https://wtm.gdgcasablanca.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    WTM Casablanca
-                </a>
-                </li>
+                {aboutLinks.map(({ link, label, external }, index) => (
+                  <li key={index}>
+                    <Link to={link} external={external}>
+                      {label}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
             <div class="links-block">
               <h5>Partners</h5>
               <ul class="links-list">
-                <li>
-                  <a
-                    href="mailto:contactgdgcasablanca@gmail.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    contactgdgcasablanca@gmail.com
-                </a>
-                </li>
+                {partnersLinks.map(({ link, label, external }, index) => (
+                  <li key={index}>
+                    <Link to={link} external={external}>
+                      {label}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
