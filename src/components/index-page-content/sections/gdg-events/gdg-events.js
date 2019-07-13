@@ -3,6 +3,7 @@ import { Cached } from '@material-ui/icons'
 
 import { BaseSection } from '../../../base-section/base-section'
 import { EventCard } from './event-card/event-card'
+import Link from '../../../link/link'
 import './gdg-events.css'
 
 const MEETUP_ENDPOINT =
@@ -53,50 +54,49 @@ export class GDGEvents extends React.Component {
           {loading ? (
             <Cached className="animate-spin" />
           ) : (
-            upcomingEvents.map((eventData, index) => {
-              const months = [
-                'January',
-                'February',
-                'March',
-                'April',
-                'May',
-                'June',
-                'July',
-                'August',
-                'September',
-                'October',
-                'November',
-                'December',
-              ]
-              const eventDate = new Date(eventData.local_date)
-              const date = `${
-                months[eventDate.getMonth()]
-              } ${eventDate.getDate()}, ${eventDate.getFullYear()}`
+              upcomingEvents.map((eventData, index) => {
+                const months = [
+                  'January',
+                  'February',
+                  'March',
+                  'April',
+                  'May',
+                  'June',
+                  'July',
+                  'August',
+                  'September',
+                  'October',
+                  'November',
+                  'December',
+                ]
+                const eventDate = new Date(eventData.local_date)
+                const date = `${
+                  months[eventDate.getMonth()]
+                  } ${eventDate.getDate()}, ${eventDate.getFullYear()}`
 
-              const event = {
-                title: eventData.name || '',
-                date: date || '',
-                eventLink: eventData.link || '',
-                timeFrom: eventData.local_time || '',
-                timeTo: '',
-                location:
-                  (eventData.venue &&
-                    `${eventData.venue.name}, ${eventData.venue.city}`) ||
-                  'Soon ...',
-              }
+                const event = {
+                  title: eventData.name || '',
+                  date: date || '',
+                  eventLink: eventData.link || '',
+                  timeFrom: eventData.local_time || '',
+                  timeTo: '',
+                  location:
+                    (eventData.venue &&
+                      `${eventData.venue.name}, ${eventData.venue.city}`) ||
+                    'Soon ...',
+                }
 
-              return <EventCard key={String(index)} {...event} />
-            })
-          )}
+                return <EventCard key={String(index)} {...event} />
+              })
+            )}
         </div>
-        <a
-          href="https://www.meetup.com/GDGCasablanca/events/"
-          rel="noopener noreferrer"
-          target="_blank"
+        <Link
+          to="https://www.meetup.com/GDGCasablanca/events/"
+          external
           className="see-all-link"
         >
           See All GDG Casablanca Events
-        </a>
+        </Link>
       </BaseSection>
     )
   }

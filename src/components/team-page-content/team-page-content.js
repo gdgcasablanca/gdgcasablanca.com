@@ -1,5 +1,6 @@
 import React from 'react'
 
+import Link from '../link/link'
 import { BaseSection } from '../base-section/base-section'
 import OrganizerList from '../organizer-list/organizer-list'
 import teamMembersData from './team-members-data'
@@ -15,9 +16,12 @@ const TeamPageContent = () => {
         <OrganizerList teamMembersData={teamMembersData} />
         <p className="p">
           Contact us via email: &nbsp;
-          <a href="mailto:contact@gdgcasablanca.com">
+          <Link
+            to="mailto:contact@gdgcasablanca.com"
+            external
+          >
             contact@gdgcasablanca.com
-          </a>
+          </Link>
         </p>
       </BaseSection>
     </>

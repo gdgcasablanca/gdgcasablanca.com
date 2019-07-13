@@ -1,5 +1,6 @@
 import React from 'react'
 
+import Link from '../../../link/link'
 import { BaseSection } from '../../../base-section/base-section'
 
 export const HeroSection = () => (
@@ -22,14 +23,13 @@ export const HeroSection = () => (
       #GDGCasablanca &nbsp; #WTMCasablanca &nbsp; #GDG &nbsp; #WTM
     </p>
     <div className="action-btns">
-      <a
+      <Link
+        to="https://www.meetup.com/GDGCasablanca/"
+        external
         className="btn lg"
-        href="https://www.meetup.com/GDGCasablanca/"
-        target="_blank"
-        rel="noopener noreferrer"
       >
         Check our Meetup page
-      </a>
+      </Link>
     </div>
   </BaseSection>
 )

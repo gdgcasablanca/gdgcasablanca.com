@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link } from 'gatsby'
+import Link from '../link/link'
 
 import GDGCasaLogo from '../../images/logo-gdg.svg'
 import WTMCasaLogo from '../../images/logo-wtm.svg'
@@ -10,29 +10,28 @@ export const Header = ({ siteTitle }) => (
   <header className="header">
     <nav className="nav">
       <div className="container">
-        <a href="/" className="logo logo-gdg">
+        <Link to="/" className="logo logo-gdg">
           <img src={GDGCasaLogo} alt={siteTitle} />
-        </a>
+        </Link>
 
         <div className="nav-links">
           <Link to="/">Home</Link>
           <Link to="/#Events">Events</Link>
           <Link to="/#Contact">Contact</Link>
           <Link to="/team">Team</Link>
-          {/* <a href="#!">About</a>  */}
+          {/* <Link to="#!">About</Link>  */}
         </div>
 
-        <a
-          href="https://wtm.gdgcasablanca.com"
+        <Link
+          to="https://wtm.gdgcasablanca.com"
           className="logo logo-wtm"
-          target="_blank"
-          rel="noopener noreferrer"
+          external
         >
           <img
             src={WTMCasaLogo}
             alt="WTM Casablanca. Connect. Create. Celebrate."
           />
-        </a>
+        </Link>
       </div>
     </nav>
   </header>

@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { BaseSection } from '../../../base-section/base-section'
+import Link from '../../../link/link'
 
 export const ContactSection = () => (
   <BaseSection
@@ -10,9 +11,9 @@ export const ContactSection = () => (
   >
     <p className="p">
       Contact us via email: &nbsp;
-      <a href="mailto:contact@gdgcasablanca.com">
+      <Link to="mailto:contact@gdgcasablanca.com" external>
         contact@gdgcasablanca.com
-      </a>
+      </Link>
     </p>
   </BaseSection>
 )
