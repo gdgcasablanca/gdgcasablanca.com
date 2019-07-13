@@ -1,5 +1,5 @@
 import React from 'react'
-import _Link from 'gatsby-link'
+import GatsbyLink from 'gatsby-link'
 
 const Link = ({
   to,
@@ -21,9 +21,9 @@ const Link = ({
   }
 
   return (
-    <_Link to={to} {...props}>
+    <GatsbyLink to={to} {...props}>
       {children}
-    </_Link>
+    </GatsbyLink>
   )
 }
 
