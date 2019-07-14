@@ -7,7 +7,7 @@ import WTMCasaLogo from '../../images/logo-wtm.svg'
 import './header.css'
 
 export const Header = ({ siteTitle }) => (
-  <header className="header">
+  <header className="header" aria-label="Site Header content">
     <div className="container">
       <Link to="/" className="logo logo-gdg">
         <img src={GDGCasaLogo} alt={siteTitle} />

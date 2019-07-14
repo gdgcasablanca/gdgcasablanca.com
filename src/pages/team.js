@@ -7,7 +7,10 @@ import TeamPageContent from '../components/team-page-content/team-page-content'
 const Team = () => {
   return (
     <Layout>
-      <SEO title="Home" keywords={['GDG Casablanca', 'GDG Casablanca Team', 'GDG']} />
+      <SEO
+        title="Home"
+        keywords={['GDG Casablanca', 'GDG Casablanca Team', 'GDG']}
+      />
       <TeamPageContent />
     </Layout>
   )
