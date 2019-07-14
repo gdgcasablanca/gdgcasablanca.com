@@ -1,5 +1,6 @@
 import React from 'react'
 
+import FooterNav from '../footer-nav/footer-nav';
 import Link from '../link/link'
 import './footer.css'
 
@@ -49,48 +50,15 @@ const partnersLinks = [
 
 export const Footer = () => {
   return (
-    <footer className="section footer">
+    <footer className="section footer" aria-label="Site Footer content">
       <div className="container">
         <div style={{ width: '100%' }}>
           <p className="small-text">Developer community</p>
           <h1>GDG Casablanca.</h1>
           <div className="links-block-wrapper">
-            <div className="links-block">
-              <h5>Socials</h5>
-              <ul className="links-list">
-                {socialLinks.map(({ link, label, external }, index) => (
-                  <li key={index}>
-                    <Link to={link} external={external}>
-                      {label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="links-block">
-              <h5>About</h5>
-              <ul className="links-list">
-                {aboutLinks.map(({ link, label, external }, index) => (
-                  <li key={index}>
-                    <Link to={link} external={external}>
-                      {label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="links-block">
-              <h5>Partners</h5>
-              <ul className="links-list">
-                {partnersLinks.map(({ link, label, external }, index) => (
-                  <li key={index}>
-                    <Link to={link} external={external}>
-                      {label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            <FooterNav links={socialLinks} title='Socials' />
+            <FooterNav links={aboutLinks} title='About' />
+            <FooterNav links={partnersLinks} title='Partners' />
           </div>
         </div>
       </div>
