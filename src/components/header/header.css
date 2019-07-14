@@ -1,37 +1,37 @@
-.nav {
+.header {
   border-bottom: 1px solid var(--light-grey);
   background-color: rgba(255, 255, 255, 0.96);
 }
-.nav > .container {
+.header > .container {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   align-items: flex-start;
   padding: 8px var(--padding);
 }
-.nav a {
+.header a {
   color: var(--grey);
 }
-.nav a:hover {
+.header a:hover {
   color: var(--primary-color);
 }
-.nav > .container a:not(:last-child) {
+.header > .container a:not(:last-child) {
   margin-right: 12px;
 }
-.nav .logo-gdg img {
+.header .logo-gdg img {
   height: 22px;
   margin-right: 0.8rem;
 }
-.nav .logo-wtm img {
+.header .logo-wtm img {
   height: 50px;
 }
 
-.nav > .container > .logo-gdg {
+.header > .container > .logo-gdg {
   padding-bottom: 1.4rem;
   padding-left: 1rem;
   padding-top: 1rem;
 }
-.nav > .container > .nav-links {
+.header > .container > .header-links {
   padding-left: 1rem;
   padding-bottom: 1rem;
 }
@@ -40,21 +40,21 @@
     position: sticky;
     top: 0;
   }
-  .nav > .container {
+  .header > .container {
     flex-direction: row;
     align-items: center;
   }
-  .nav > .container > *:not(:last-child) {
+  .header > .container > *:not(:last-child) {
     padding: 0;
   }
-  .nav .logo-wtm {
+  .header .logo-wtm {
     margin-left: auto;
     display: flex;
   }
 }
 
-.nav-links a:focus,
-.nav-links a:active {
+.header-links a:focus,
+.header-links a:active {
   background-color: rgba(32, 33, 36, 0.05);
   outline: 4px solid rgba(32, 33, 36, 0.05);
   border-radius: 3px;
