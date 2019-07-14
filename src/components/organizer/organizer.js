@@ -5,16 +5,16 @@ import Link from '../link/link';
 
 const Organizer = ({ name, imgLink, job, link }) => {
   return (
-    <div class="organizer">
+    <div className="organizer">
       <div className="inner-organizer">
         <Link
           to={link}
           external
-          class="link"
+          className="link"
         >
-          <img src={imgLink} alt={name} class="organizer-image" />
-          <p class="organizer-name">{name}</p>
-          <p class="organizer-function">{job}</p>
+          <img src={imgLink} alt={name} className="organizer-image" />
+          <p className="organizer-name">{name}</p>
+          <p className="organizer-function">{job}</p>
         </Link>
       </div>
     </div>

@@ -50,14 +50,14 @@ const partnersLinks = [
 export const Footer = () => {
   return (
     <footer className="section footer">
-      <div class="container">
+      <div className="container">
         <div style={{ width: '100%' }}>
-          <p class="small-text">Developer community</p>
+          <p className="small-text">Developer community</p>
           <h1>GDG Casablanca.</h1>
-          <div class="links-block-wrapper">
-            <div class="links-block">
+          <div className="links-block-wrapper">
+            <div className="links-block">
               <h5>Socials</h5>
-              <ul class="links-list">
+              <ul className="links-list">
                 {socialLinks.map(({ link, label, external }, index) => (
                   <li key={index}>
                     <Link to={link} external={external}>
@@ -67,9 +67,9 @@ export const Footer = () => {
                 ))}
               </ul>
             </div>
-            <div class="links-block">
+            <div className="links-block">
               <h5>About</h5>
-              <ul class="links-list">
+              <ul className="links-list">
                 {aboutLinks.map(({ link, label, external }, index) => (
                   <li key={index}>
                     <Link to={link} external={external}>
@@ -79,9 +79,9 @@ export const Footer = () => {
                 ))}
               </ul>
             </div>
-            <div class="links-block">
+            <div className="links-block">
               <h5>Partners</h5>
-              <ul class="links-list">
+              <ul className="links-list">
                 {partnersLinks.map(({ link, label, external }, index) => (
                   <li key={index}>
                     <Link to={link} external={external}>
