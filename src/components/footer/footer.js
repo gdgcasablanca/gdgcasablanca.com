@@ -1,7 +1,6 @@
 import React from 'react'
 
-import FooterNav from '../footer-nav/footer-nav';
-import Link from '../link/link'
+import FooterNav from '../footer-nav/footer-nav'
 import './footer.css'
 
 const socialLinks = [
