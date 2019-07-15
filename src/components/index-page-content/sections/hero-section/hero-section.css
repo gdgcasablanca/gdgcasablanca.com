@@ -1,0 +1,10 @@
+.hero .description {
+  max-width: 75ch;
+  width: 100%;
+  font-size: 1.1rem;
+  color: var(--dark-grey);
+  line-height: 1.5;
+}
+.hero .hashtags a {
+  color: var(--grey);
+}

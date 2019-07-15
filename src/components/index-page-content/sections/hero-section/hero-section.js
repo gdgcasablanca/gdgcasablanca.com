@@ -2,6 +2,13 @@ import React from 'react'
 
 import Link from '../../../link/link'
 import { BaseSection } from '../../../base-section/base-section'
+import './hero-section.css'
+
+const TwHashtagLink = ({ label }) => (
+  <Link to={`https://twitter.com/hashtag/${label}`} external>#{label}</Link>
+)
+
+const twLinks = ['GDGCasablanca', 'WTMCasablanca', 'GDG', 'WTM']
 
 export const HeroSection = () => (
   <BaseSection
@@ -20,16 +27,16 @@ export const HeroSection = () => (
       product APIs like the Maps API, YouTube API and Google Calendar API.
     </p>
     <p className="hashtags">
-      #GDGCasablanca &nbsp; #WTMCasablanca &nbsp; #GDG &nbsp; #WTM
+      {twLinks.map((link, index) => (
+        <React.Fragment key={index}><TwHashtagLink label={link} /> &emsp;</React.Fragment>
+      ))}
     </p>
-    <div className="action-btns">
-      <Link
-        to="https://www.meetup.com/GDGCasablanca/"
-        external
-        className="btn lg"
-      >
-        Check our Meetup page
-      </Link>
-    </div>
+    <Link
+      to="https://www.meetup.com/GDGCasablanca/"
+      external
+      className="btn lg"
+    >
+      Check our Meetup page
+    </Link>
   </BaseSection>
 )
