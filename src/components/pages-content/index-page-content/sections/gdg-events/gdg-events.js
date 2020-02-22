@@ -1,7 +1,7 @@
 import React from 'react'
 import { Cached } from '@material-ui/icons'
 
-import { BaseSection } from '../../../../base-section/base-section'
+import BaseSection from '../../../../base-section/base-section'
 import EventCard from '../../../../ui/event-card/event-card'
 import Link from '../../../../link/link'
 import './gdg-events.css'
@@ -47,7 +47,7 @@ export class GDGEvents extends React.Component {
             Planned <span className='pColor'>Events</span>.
           </>
         )}
-        classNames='section-bg'
+        bg
         id='Events'
       >
         <div className='event-cards'>

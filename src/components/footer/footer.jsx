@@ -1,7 +1,8 @@
 import React from 'react'
 
 import FooterNav from '../footer-nav/footer-nav'
-import './footer.css'
+import BaseSection from '../base-section/base-section'
+import styles from './footer.module.css'
 
 const socialLinks = [
   {
@@ -49,18 +50,19 @@ const partnersLinks = [
 
 export const Footer = () => {
   return (
-    <footer className="section footer" aria-label="Site Footer content">
-      <div className="container">
-        <div style={{ width: '100%' }}>
-          <p className="small-text">Developer community</p>
-          <h1>GDG Casablanca.</h1>
-          <div className="links-block-wrapper">
-            <FooterNav links={socialLinks} title='Socials' />
-            <FooterNav links={aboutLinks} title='About' />
-            <FooterNav links={partnersLinks} title='Partners' />
-          </div>
-        </div>
+    <BaseSection
+      bg
+      as='footer'
+      classes={styles.footer}
+      aria-label='Site Footer content'
+      smallText='Developer community'
+      SectionTitle='GDG Casablanca.'
+    >
+      <div className={styles.linksBlockWrapper}>
+        <FooterNav links={socialLinks} title='Socials' />
+        <FooterNav links={aboutLinks} title='About' />
+        <FooterNav links={partnersLinks} title='Partners' />
       </div>
-    </footer>
+    </BaseSection>
   )
 }
