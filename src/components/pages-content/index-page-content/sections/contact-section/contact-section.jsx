@@ -6,7 +6,7 @@ import Link from '../../../../link/link'
 export const ContactSection = () => (
   <BaseSection SectionTitle='Contact.' classes='contact' id='Contact'>
     <p className='p'>
-      Contact us via email: &nbsp;
+      Contact us via email:{' '}
       <Link to='mailto:contact@gdgcasablanca.com' external>
         contact@gdgcasablanca.com
       </Link>

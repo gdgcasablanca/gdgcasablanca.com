@@ -4,16 +4,16 @@ import Link from '../link/link'
 
 import GDGCasaLogo from '../../images/logo-gdg.svg'
 import WTMCasaLogo from '../../images/logo-wtm.svg'
-import './header.css'
+import styles from './header.module.css'
 
 export const Header = ({ siteTitle }) => (
-  <header className='header' aria-label='Site Header content'>
+  <header className={styles.header} aria-label='Site Header content'>
     <div className='container'>
-      <Link to='/' classes='logo logo-gdg'>
+      <Link to='/' classes={styles.logoGdg}>
         <img src={GDGCasaLogo} alt={siteTitle} />
       </Link>
 
-      <nav className='nav-links'>
+      <nav className={styles.navLinks}>
         <Link to='/'>Home</Link>
         <Link to='/#Events'>Events</Link>
         <Link to='/#Contact'>Contact</Link>
@@ -21,7 +21,11 @@ export const Header = ({ siteTitle }) => (
         {/* <Link to="#!">About</Link>  */}
       </nav>
 
-      <Link to='https://wtm.gdgcasablanca.com' classes='logo logo-wtm' external>
+      <Link
+        to='https://wtm.gdgcasablanca.com'
+        classes={styles.logoWtm}
+        external
+      >
         <img
           src={WTMCasaLogo}
           alt='WTM Casablanca. Connect. Create. Celebrate.'

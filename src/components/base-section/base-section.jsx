@@ -15,8 +15,6 @@ const BaseSection = ({
 }) => {
   const Comp = as || 'section'
 
-  console.log(typeof SectionTitle)
-
   const title =
     typeof SectionTitle === 'string' ? SectionTitle : <SectionTitle />
 

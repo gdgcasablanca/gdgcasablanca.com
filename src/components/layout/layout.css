@@ -38,15 +38,6 @@ body {
   flex-grow: 1;
 }
 
-a {
-  text-decoration: none;
-  transition: color 200ms ease;
-  color: var(--primary-color);
-}
-a:hover {
-  color: var(--primary-color-darker);
-}
-
 .p {
   max-width: 54ch;
   line-height: 1.5;
