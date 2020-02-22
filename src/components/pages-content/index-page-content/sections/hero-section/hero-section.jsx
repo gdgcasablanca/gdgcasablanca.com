@@ -3,6 +3,7 @@ import React from 'react'
 import Link from '../../../../link/link'
 import BaseSection from '../../../../base-section/base-section'
 import Button from '../../../../ui/button/button'
+import Text from '../../../../ui/text/text'
 import styles from './hero-section.module.css'
 
 const TwHashtagLink = ({ label }) => (
@@ -17,7 +18,11 @@ export const HeroSection = () => (
   <BaseSection
     SectionTitle={() => (
       <>
-        Be a hero. Be a <span className='pColor'>GDG</span>.
+        Be a hero. Be a{' '}
+        <Text color='primary' size='inherit' as='span'>
+          GDG
+        </Text>
+        .
       </>
     )}
     classes={styles.hero}

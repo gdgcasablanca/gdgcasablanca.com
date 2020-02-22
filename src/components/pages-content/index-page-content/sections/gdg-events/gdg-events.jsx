@@ -5,6 +5,7 @@ import BaseSection from '../../../../base-section/base-section'
 import EventCard from '../../../../ui/event-card/event-card'
 import Link from '../../../../link/link'
 import styles from './gdg-events.module.css'
+import Text from '../../../../ui/text/text'
 
 const MEETUP_ENDPOINT =
   'https://api.meetup.com/gdgcasablanca/events?&photo-host=public&page=20'
@@ -82,7 +83,11 @@ const GDGEvents = React.memo(() => {
       id='Events'
       SectionTitle={() => (
         <>
-          Planned <span className='pColor'>Events</span>.
+          Planned{' '}
+          <Text color='primary' as='span' size='inherit'>
+            Events
+          </Text>
+          .
         </>
       )}
     >
