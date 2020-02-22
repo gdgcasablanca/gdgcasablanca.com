@@ -1,20 +1,10 @@
 import React from 'react'
-import GatsbyLink from 'gatsby-link'
+import { Link as GatsbyLink } from 'gatsby'
 
-const Link = ({
-  to,
-  children,
-  external,
-  ...props,
-}) => {
+const Link = ({ to, children, external, ...props }) => {
   if (external) {
     return (
-      <a
-        href={to}
-        target="_blank"
-        rel="noopener noreferrer"
-        {...props}
-      >
+      <a href={to} target="_blank" rel="noopener noreferrer" {...props}>
         {children}
       </a>
     )
