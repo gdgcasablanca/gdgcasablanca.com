@@ -1,7 +1,7 @@
 import React from 'react'
 
-import { BaseSection } from '../../../base-section/base-section'
-import Link from '../../../link/link'
+import { BaseSection } from '../../../../base-section/base-section'
+import Link from '../../../../link/link'
 
 export const ContactSection = () => (
   <BaseSection

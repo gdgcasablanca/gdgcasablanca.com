@@ -1,11 +1,13 @@
 import React from 'react'
 
-import Link from '../../../link/link'
-import { BaseSection } from '../../../base-section/base-section'
+import Link from '../../../../link/link'
+import { BaseSection } from '../../../../base-section/base-section'
 import './hero-section.css'
 
 const TwHashtagLink = ({ label }) => (
-  <Link to={`https://twitter.com/hashtag/${label}`} external>#{label}</Link>
+  <Link to={`https://twitter.com/hashtag/${label}`} external>
+    #{label}
+  </Link>
 )
 
 const twLinks = ['GDGCasablanca', 'WTMCasablanca', 'GDG', 'WTM']
@@ -28,7 +30,9 @@ export const HeroSection = () => (
     </p>
     <p className="hashtags">
       {twLinks.map((link, index) => (
-        <React.Fragment key={index}><TwHashtagLink label={link} /> &emsp;</React.Fragment>
+        <React.Fragment key={index}>
+          <TwHashtagLink label={link} /> &emsp;
+        </React.Fragment>
       ))}
     </p>
     <Link
