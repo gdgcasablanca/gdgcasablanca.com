@@ -1,20 +1,21 @@
-.links-list {
+.linksList {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-.links-list li {
+.linksList li {
   margin-bottom: 4px;
 }
-.links-list li a {
+.linksList li a {
   color: var(--grey);
 }
-.links-list li a:hover {
+.linksList li a:hover {
   color: var(--dark-grey);
 }
 
-.links-block h5 {
-  font-size: 18px;
+.navTitle {
+  font-size: 1.1rem;
   margin-bottom: 16px;
   margin-top: 16px;
+  font-weight: 400;
 }
