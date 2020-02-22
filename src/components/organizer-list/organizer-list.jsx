@@ -1,13 +1,11 @@
 import React from 'react'
 
 import Organizer from '../organizer/organizer'
-import './organizer-list.css'
+import styles from './organizer-list.module.css'
 
-const OrganizerList = ({
-  teamMembersData,
-}) => {
+const OrganizerList = ({ teamMembersData }) => {
   return (
-    <div className="organizers">
+    <div className={styles.organizers}>
       {teamMembersData.map(({ name, imgLink, job, link }) => (
         <Organizer name={name} imgLink={imgLink} job={job} link={link} />
       ))}

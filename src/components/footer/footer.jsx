@@ -1,6 +1,6 @@
 import React from 'react'
 
-import FooterNav from '../footer-nav/footer-nav'
+import FooterNav from '../ui/footer-nav/footer-nav'
 import BaseSection from '../base-section/base-section'
 import styles from './footer.module.css'
 
