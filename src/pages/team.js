@@ -2,7 +2,7 @@ import React from 'react'
 
 import Layout from '../components/layout/layout'
 import SEO from '../components/seo'
-import TeamPageContent from '../components/team-page-content/team-page-content'
+import TeamPageContent from '../components/pages-content/team-page-content/team-page-content'
 
 const Team = () => {
   return (

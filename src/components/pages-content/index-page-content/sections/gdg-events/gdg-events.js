@@ -2,7 +2,7 @@ import React from 'react'
 import { Cached } from '@material-ui/icons'
 
 import { BaseSection } from '../../../../base-section/base-section'
-import { EventCard } from './event-card/event-card'
+import EventCard from '../../../../ui/event-card/event-card'
 import Link from '../../../../link/link'
 import './gdg-events.css'
 
@@ -32,7 +32,7 @@ export class GDGEvents extends React.Component {
           () =>
             this.setState({
               loading: false,
-            })
+            }),
         )
       })
       .catch(err => console.log(err))
@@ -44,15 +44,15 @@ export class GDGEvents extends React.Component {
       <BaseSection
         SectionTitle={() => (
           <>
-            Planned <span className="pColor">Events</span>.
+            Planned <span className='pColor'>Events</span>.
           </>
         )}
-        classNames="section-bg"
-        id="Events"
+        classNames='section-bg'
+        id='Events'
       >
-        <div className="event-cards">
+        <div className='event-cards'>
           {loading ? (
-            <Cached className="animate-spin" />
+            <Cached className='animate-spin' />
           ) : (
             upcomingEvents.map((eventData, index) => {
               const months = [
@@ -91,9 +91,9 @@ export class GDGEvents extends React.Component {
           )}
         </div>
         <Link
-          to="https://www.meetup.com/GDGCasablanca/events/"
+          to='https://www.meetup.com/GDGCasablanca/events/'
           external
-          className="see-all-link"
+          classes='see-all-link'
         >
           See All GDG Casablanca Events
         </Link>
