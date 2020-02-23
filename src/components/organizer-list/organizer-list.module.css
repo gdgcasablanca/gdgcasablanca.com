@@ -1,0 +1,7 @@
+.organizers {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-gap: 2rem 0.5rem;
+  margin: 2rem 0 4rem;
+}

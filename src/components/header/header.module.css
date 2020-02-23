@@ -1,0 +1,66 @@
+.header {
+  border-bottom: 1px solid var(--light-grey);
+  background-color: rgba(255, 255, 255, 0.96);
+}
+.header > :global(.container) {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0.5rem 1rem;
+}
+
+.logoGdg {
+  padding-bottom: 1.4rem;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  margin-right: 1.6rem;
+}
+.logoGdg img {
+  height: 22px;
+}
+.logoWtm img {
+  height: 50px;
+}
+
+.nav-links {
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+}
+.nav-links a {
+  color: var(--grey);
+}
+.nav-links a:not(:last-child) {
+  margin-right: 0.8rem;
+}
+.nav-links a:hover {
+  color: var(--primary-color);
+}
+.nav-links a:focus,
+.nav-links a:active {
+  background-color: rgba(32, 33, 36, 0.05);
+  outline: 4px solid rgba(32, 33, 36, 0.05);
+  border-radius: 4px;
+}
+
+@media (min-width: 768px) {
+  .header {
+    position: sticky;
+    top: 0;
+  }
+  .header > :global(.container) {
+    flex-direction: row;
+    align-items: center;
+  }
+  .header > :global(.container) > *:not(:last-child) {
+    padding: 0;
+  }
+
+  .logoWtm {
+    margin-left: auto;
+    display: flex;
+  }
+  .nav-links {
+    padding: 0;
+  }
+}

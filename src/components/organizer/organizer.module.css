@@ -1,0 +1,35 @@
+.organizer {
+  display: flex;
+}
+.inner-organizer {
+  margin: auto;
+  text-align: center;
+}
+.organizer .organizer-image {
+  --organizer-image-size: 165px;
+  width: var(--organizer-image-size);
+  height: var(--organizer-image-size);
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+  background-color: var(--light-grey);
+}
+.organizer-function {
+  color: #000;
+}
+.organizer-name,
+.organizer-function {
+  margin: 0;
+}
+.organizer-name {
+  font-size: 24px;
+  margin-bottom: 0.2rem;
+}
+.link {
+  color: #000;
+  text-decoration: none;
+  transition: color 0.1s ease-out;
+}
+.link:hover {
+  color: var(--primary-color);
+}
