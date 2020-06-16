@@ -11,10 +11,8 @@
 }
 
 .logoGdg {
-  padding-bottom: 1.4rem;
-  padding-left: 1rem;
-  padding-top: 1rem;
-  margin-right: 1.6rem;
+  padding: 0 0.5rem;
+  margin-inline-end: 1.6rem;
 }
 .logoGdg img {
   height: 22px;
