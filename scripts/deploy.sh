@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# yarn
-# yarn build
+yarn
+yarn build
 
 if [ "$TRAVIS_BRANCH" = "develop" ]; then
   echo 'Deploying to the develop branch ...'
