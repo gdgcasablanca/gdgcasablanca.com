@@ -1,9 +1,8 @@
 language: node_js
 node_js:
-  - '10'
+  - '12'
 
 script:
-  - yarn
   - yarn run build
 
 install:
@@ -18,6 +17,3 @@ jobs:
   include:
     - stage: deploy
       script: bash scripts/deploy.sh
-# after_success:
-#   - firebase use develop
-#   - firebase deploy --token $FIREBASE_TOKEN
