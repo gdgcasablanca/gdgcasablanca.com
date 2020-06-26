@@ -1,0 +1,21 @@
+.no-results-card {
+  width: 100%;
+  padding: 1.8rem 2rem;
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  height: 270px;
+  animation: transparentBg 350ms linear forwards;
+}
+
+.title {
+  margin: 0;
+  font-weight: 100;
+  font-size: 1.618rem;
+}
+
+@keyframes transparentBg {
+  to {
+    background-color: transparent;
+  }
+}
