@@ -1,7 +1,7 @@
 .event-cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  grid-gap: 1rem;
+  grid-gap: 1em;
 }
 
 .see-all-link:focus,
@@ -12,8 +12,9 @@
   border-radius: 3px;
 }
 .see-all-link {
-  margin-top: 2rem;
+  margin-block-start: 2em;
   display: inline-block;
+  text-transform: capitalize;
 }
 
 .animate-spin {

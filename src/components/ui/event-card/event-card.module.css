@@ -1,6 +1,6 @@
 .event-card {
   width: 100%;
-  padding: 1.8rem 2rem;
+  padding: 1.8em 2em;
   background-color: white;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
@@ -12,27 +12,27 @@
 }
 .event-card .title {
   margin: 0;
-  margin-bottom: 1.2rem;
+  margin-block-end: 1.2em;
   color: var(--grey);
   font-weight: 100;
-  font-size: 1.618rem;
+  font-size: 1.618em;
 }
 .event-card .details {
   list-style: none;
   padding: 0;
 }
 .event-card .details li {
-  font-size: 1rem;
-  margin-bottom: 8px;
+  font-size: 1em;
+  margin-block-end: 8px;
   display: flex;
   align-items: center;
 }
 .event-card .details li .material-icons {
-  font-size: 1rem;
-  margin-right: 12px;
+  font-size: 1em;
+  margin-inline-end: 12px;
   color: var(--primary-color);
 }
 .event-card .more-link {
-  margin-top: 24px;
+  margin-block-start: 24px;
   display: inline-block;
 }

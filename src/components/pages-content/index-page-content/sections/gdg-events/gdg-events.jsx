@@ -1,11 +1,12 @@
 import React from 'react'
-import { Cached as CachedIcon } from '@material-ui/icons'
 
 import BaseSection from '../../../../base-section/base-section'
 import EventCard from '../../../../ui/event-card/event-card'
 import Link from '../../../../link/link'
 import styles from './gdg-events.module.css'
 import Text from '../../../../ui/text/text'
+import LoadingCard from '../../../../ui/loading-card/loading-card'
+import NoResultsCard from '../../../../ui/no-results-card/no-results-card'
 
 const MEETUP_ENDPOINT =
   'https://api.meetup.com/gdgcasablanca/events?&photo-host=public&page=20'
@@ -32,21 +33,27 @@ const AllEvents = React.memo(() => {
   const [loading, setLoading] = React.useState(true)
 
   React.useEffect(() => {
+    let timeoutId = null
     fetch(MEETUP_DATA_ENDPOINT)
-      .then(response => response.json())
-      .then(data => {
-        setUpcomingEvents(data)
-        setLoading(false)
+      .then((response) => response.json())
+      .then((data) => {
+        timeoutId = setTimeout(() => {
+          setUpcomingEvents(data)
+          setLoading(false)
+        }, 500)
       })
-      .catch(err => console.error(err))
+      .catch((err) => console.error(err))
+
+    return () => {
+      clearTimeout(timeoutId)
+    }
   }, [])
 
   if (loading) {
-    return <CachedIcon className={styles.animateSpin} />
+    return <LoadingCard />
   }
 
-  return (
-    upcomingEvents &&
+  return upcomingEvents.length > 0 ? (
     upcomingEvents.map((eventData, index) => {
       const {
         local_date: localDate,
@@ -73,6 +80,8 @@ const AllEvents = React.memo(() => {
 
       return <EventCard key={String(index)} {...event} />
     })
+  ) : (
+    <NoResultsCard />
   )
 })
 
@@ -99,7 +108,7 @@ const GDGEvents = React.memo(() => {
         to='https://www.meetup.com/GDGCasablanca/events/'
         external
       >
-        See All GDG Casablanca Events
+        See all events on meetup
       </Link>
     </BaseSection>
   )
