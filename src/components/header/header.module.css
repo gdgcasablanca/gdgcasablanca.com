@@ -7,12 +7,12 @@
   flex-wrap: wrap;
   flex-direction: column;
   align-items: flex-start;
-  padding: 0.5rem 1rem;
+  padding: 0.5em 1em;
 }
 
 .logoGdg {
-  padding: 0 0.5rem;
-  margin-inline-end: 1.6rem;
+  padding: 0 0.5em;
+  margin-inline-end: 1.6em;
 }
 .logoGdg img {
   height: 22px;
@@ -22,14 +22,14 @@
 }
 
 .nav-links {
-  padding-left: 1rem;
-  padding-bottom: 1rem;
+  padding-inline-start: 1em;
+  padding-block-end: 1em;
 }
 .nav-links a {
   color: var(--grey);
 }
 .nav-links a:not(:last-child) {
-  margin-right: 0.8rem;
+  margin-inline-end: 0.8em;
 }
 .nav-links a:hover {
   color: var(--primary-color);
@@ -55,7 +55,7 @@
   }
 
   .logoWtm {
-    margin-left: auto;
+    margin-inline-start: auto;
     display: flex;
   }
   .nav-links {

@@ -1,5 +1,5 @@
 .section {
-  padding: 5rem 0 4rem;
+  padding: 5em 0 4em;
 }
 .sectionBg {
   background-color: var(--light-grey);
@@ -14,8 +14,8 @@
 }
 .section .heading {
   margin: 0;
-  margin-bottom: 1.2rem;
+  margin-block-end: 0.46em;
   color: var(--dark-grey);
-  font-size: 2.6rem;
+  font-size: 2.6em;
   font-weight: 300;
 }

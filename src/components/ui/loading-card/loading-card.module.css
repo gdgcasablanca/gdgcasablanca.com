@@ -1,6 +1,6 @@
 .loading-card {
   width: 100%;
-  padding: 1.8rem 2rem;
+  padding: 1.8em 2em;
   background-color: white;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
@@ -9,13 +9,12 @@
 
 .title {
   margin: 0;
-  margin-bottom: 1.2rem;
+  margin-block-end: 1.2em;
   height: 1.2em;
   width: 100%;
 }
 .more-link {
-  display: inline-block;
-  margin-top: 24px;
+  margin-block-start: 24px;
   height: 1em;
   width: 50%;
 }
@@ -23,7 +22,7 @@
 .listItem {
   height: 1em;
   width: 45%;
-  margin-bottom: 12px;
+  margin-block-end: 12px;
 }
 
 @keyframes placeHolderShimmer {

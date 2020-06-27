@@ -108,7 +108,7 @@ const GDGEvents = React.memo(() => {
         to='https://www.meetup.com/GDGCasablanca/events/'
         external
       >
-        See All GDG Casablanca Events
+        See all events on meetup
       </Link>
     </BaseSection>
   )
