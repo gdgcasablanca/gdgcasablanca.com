@@ -12,7 +12,7 @@ const NotFoundPage = () => (
       <h1 style={{ marginTop: '5rem' }}>
         <strong>NOT FOUND</strong>
       </h1>
-      <Text>The page you requested was not found.</Text>
+      <Text>The page you wanted was not found.</Text>
       <Link to='/'>Navigate to the home page</Link>
     </div>
   </Layout>
