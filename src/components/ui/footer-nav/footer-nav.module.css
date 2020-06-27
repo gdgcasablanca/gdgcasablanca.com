@@ -4,7 +4,7 @@
   padding: 0;
 }
 .linksList li {
-  margin-bottom: 4px;
+  margin-block-end: 4px;
 }
 .linksList li a {
   color: var(--grey);
@@ -14,8 +14,8 @@
 }
 
 .navTitle {
-  font-size: 1.1rem;
-  margin-bottom: 16px;
-  margin-top: 16px;
+  font-size: 1.1em;
+  margin-block-end: 16px;
+  margin-block-start: 16px;
   font-weight: 400;
 }

@@ -1,7 +1,7 @@
 .description {
   max-width: 75ch;
   width: 100%;
-  font-size: 1.1rem;
+  font-size: 1.1em;
   color: var(--dark-grey);
   line-height: 1.5;
 }
@@ -9,5 +9,5 @@
   color: var(--grey);
 }
 .cta {
-  margin-block-start: 1rem;
+  margin-block-start: 1em;
 }

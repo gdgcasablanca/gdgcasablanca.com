@@ -9,7 +9,7 @@ const NotFoundPage = () => (
   <Layout>
     <SEO title='404: Not found' />
     <div className='container'>
-      <h1 style={{ marginTop: '5rem' }}>
+      <h1 style={{ marginTop: '5em' }}>
         <strong>NOT FOUND</strong>
       </h1>
       <Text>The page you wanted was not found.</Text>
