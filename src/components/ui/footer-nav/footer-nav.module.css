@@ -4,18 +4,19 @@
   padding: 0;
 }
 .linksList li {
-  margin-block-end: 4px;
+  margin-block-end: 8px;
 }
 .linksList li a {
-  color: var(--grey);
+  color: var(--grey-500);
 }
 .linksList li a:hover {
-  color: var(--dark-grey);
+  color: var(--grey-900);
 }
 
 .navTitle {
-  font-size: 1.1em;
-  margin-block-end: 16px;
+  font-size: 1.125em;
+  margin-block-end: 8px;
   margin-block-start: 16px;
-  font-weight: 400;
+  font-weight: 600;
+  color: #4a4a4a;
 }
