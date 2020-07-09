@@ -15,13 +15,13 @@
   color: inherit;
 }
 .text.color-default {
-  color: var(--dark-grey);
+  color: var(--grey-800);
 }
 .text.color-grey {
   color: #6c757d;
 }
 .text.color-primary {
-  color: var(--primary-color);
+  color: var(--blue-500);
 }
 
 .text.inherit {

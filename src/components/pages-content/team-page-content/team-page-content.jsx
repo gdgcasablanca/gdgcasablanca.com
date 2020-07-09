@@ -10,7 +10,7 @@ import Text from '../../ui/text/text'
 const TeamPageContent = () => {
   return (
     <>
-      <BaseSection SectionTitle='Team.' classes='contact' id='Contact'>
+      <BaseSection SectionTitle='Team.'>
         <OrganizerList teamMembersData={teamMembersData} />
         <Text>
           Contact us via email: &nbsp;
