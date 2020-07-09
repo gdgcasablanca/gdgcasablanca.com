@@ -8,7 +8,7 @@ const Team = () => {
   return (
     <Layout>
       <SEO
-        title='Home'
+        title='Team'
         keywords={['GDG Casablanca', 'GDG Casablanca Team', 'GDG']}
       />
       <TeamPageContent />
