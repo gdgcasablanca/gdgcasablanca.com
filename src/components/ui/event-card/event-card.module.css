@@ -13,7 +13,7 @@
 .event-card .title {
   margin: 0;
   margin-block-end: 1.2em;
-  color: var(--grey);
+  color: var(--grey-400);
   font-weight: 100;
   font-size: 1.618em;
 }
@@ -30,7 +30,7 @@
 .event-card .details li .material-icons {
   font-size: 1em;
   margin-inline-end: 12px;
-  color: var(--primary-color);
+  color: var(--blue-500);
 }
 .event-card .more-link {
   margin-block-start: 24px;

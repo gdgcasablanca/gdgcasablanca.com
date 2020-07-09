@@ -7,7 +7,7 @@
 .see-all-link:focus,
 .event-card .more-link:focus {
   background-color: rgba(32, 33, 36, 0.05);
-  color: var(--primary-color-darker);
+  color: var(--blue-700);
   outline: 4px solid rgba(32, 33, 36, 0.05);
   border-radius: 3px;
 }
@@ -19,7 +19,7 @@
 
 .animate-spin {
   animation: spin 2s infinite linear forwards;
-  color: var(--dark-grey, #3c4043);
+  color: var(--grey-800, #3c4043);
   height: 32px !important;
   width: auto !important;
 }

@@ -2,11 +2,11 @@
   max-width: 75ch;
   width: 100%;
   font-size: 1.1em;
-  color: var(--dark-grey);
+  color: var(--grey-800);
   line-height: 1.5;
 }
 .hashtags a {
-  color: var(--grey);
+  color: var(--grey-400);
 }
 .cta {
   margin-block-start: 1em;

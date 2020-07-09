@@ -7,12 +7,15 @@
   border: none;
   border-radius: 4px;
   transition: background-color 200ms ease;
-  background-color: var(--primary-color);
-  font-size: 1em;
+  background-color: var(--blue-500);
   text-decoration: none;
   cursor: pointer;
+
+  font-size: 0.875em;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 .button:hover {
-  background-color: var(--primary-color-darker);
+  background-color: var(--blue-600);
   color: white;
 }
