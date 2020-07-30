@@ -11,13 +11,13 @@ const footerLinks = [
     title: 'About',
     links: [
       {
-        label: 'WTM Casablanca',
-        link: 'https://wtm.gdgcasablanca.com/',
-      },
-      {
         label: 'Code of conduct',
         link: '/coc',
         internal: true,
+      },
+      {
+        label: 'WTM Casablanca',
+        link: 'https://wtm.gdgcasablanca.com/',
       },
       {
         label: 'Google Developers Group',
@@ -72,8 +72,8 @@ export const Footer = () => {
       SectionTitle='GDG Casablanca.'
     >
       <div className={styles.linksBlockWrapper}>
-        {footerLinks.map(({ links, title }) => {
-          return <FooterNav links={links} title={title} />
+        {footerLinks.map(({ links, title }, index) => {
+          return <FooterNav links={links} title={title} key={String(index)} />
         })}
       </div>
 
@@ -88,8 +88,8 @@ export const Footer = () => {
         <p className={styles.copyRight}>
           By <strong>GDG Casablanca</strong> Team. The code is @&nbsp;
           <Link
-            href='https://github.com/gdgcasablanca/gdgcasablanca.com'
-            target='_blank'
+            to='https://github.com/gdgcasablanca/gdgcasablanca.com'
+            external
           >
             Github
           </Link>
