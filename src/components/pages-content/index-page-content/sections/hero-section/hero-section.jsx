@@ -12,7 +12,14 @@ const TwHashtagLink = ({ label }) => (
   </Link>
 )
 
-const twLinks = ['GDGCasablanca', 'WTMCasablanca', 'GDG', 'WTM', 'StaySafe']
+const twLinks = [
+  'GDGCasablanca',
+  'WTMCasablanca',
+  'GDG',
+  'GDGMena',
+  'WTM',
+  'WTMMena',
+]
 
 export const HeroSection = () => (
   <BaseSection
