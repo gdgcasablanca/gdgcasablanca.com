@@ -7,10 +7,10 @@
   margin-block-end: 8px;
 }
 .linksList li a {
-  color: var(--grey-500);
+  color: var(--gray-600);
 }
 .linksList li a:hover {
-  color: var(--grey-900);
+  color: var(--gray-800);
 }
 
 .navTitle {

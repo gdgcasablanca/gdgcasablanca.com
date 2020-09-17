@@ -28,6 +28,16 @@ const months = [
   'Dec',
 ]
 
+function formatDate(date) {
+  const eventDate = new Date(date)
+
+  const year = eventDate.getFullYear()
+  const month = months[eventDate.getMonth()]
+  const day = eventDate.getDate()
+
+  return `${month} ${day}, ${year}`
+}
+
 const AllEvents = React.memo(() => {
   const [upcomingEvents, setUpcomingEvents] = React.useState([])
   const [loading, setLoading] = React.useState(true)
@@ -53,36 +63,43 @@ const AllEvents = React.memo(() => {
     return <LoadingCard />
   }
 
-  return upcomingEvents.length > 0 ? (
-    upcomingEvents.map((eventData, index) => {
-      const {
-        local_date: localDate,
-        name: title,
-        link: eventLink,
-        local_time: timeFrom,
-        venue,
-      } = eventData
+  if (upcomingEvents.length <= 0) {
+    return <NoResultsCard />
+  }
 
-      const eventDate = new Date(localDate)
-      const date = `${
-        months[eventDate.getMonth()]
-      } ${eventDate.getDate()}, ${eventDate.getFullYear()}`
+  return upcomingEvents.map((eventData, index) => {
+    const {
+      local_date: localDate,
+      name: title,
+      link: eventLink,
+      local_time: timeFrom,
+      venue,
+    } = eventData
 
-      const location = venue ? `${venue.name}, ${venue.city}` : 'Soon ...'
+    const date = formatDate(localDate)
 
-      const event = {
-        title,
-        date,
-        eventLink,
-        timeFrom,
-        location,
+    const entries = []
+    if (venue) {
+      if (venue.name) {
+        entries.push(venue.name)
       }
+      if (venue.city) {
+        entries.push(venue.city)
+      }
+    }
 
-      return <EventCard key={String(index)} {...event} />
-    })
-  ) : (
-    <NoResultsCard />
-  )
+    const location = venue ? entries.join(', ') : 'Soon ...'
+
+    const event = {
+      title,
+      date,
+      eventLink,
+      timeFrom,
+      location,
+    }
+
+    return <EventCard key={String(index)} {...event} />
+  })
 })
 
 const GDGEvents = React.memo(() => {

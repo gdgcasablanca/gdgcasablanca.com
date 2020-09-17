@@ -19,7 +19,7 @@
 
 .animate-spin {
   animation: spin 2s infinite linear forwards;
-  color: var(--grey-800, #3c4043);
+  color: var(--gray-700, #3c4043);
   height: 32px !important;
   width: auto !important;
 }

@@ -15,7 +15,7 @@
   color: inherit;
 }
 .text.color-default {
-  color: var(--grey-800);
+  color: var(--gray-700);
 }
 .text.color-grey {
   color: #6c757d;
