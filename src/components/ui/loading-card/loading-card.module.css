@@ -37,7 +37,7 @@
 .gradient {
   animation: placeholderShimmer 1.8s linear infinite forwards;
 
-  background-color: var(--grey-100);
+  background-color: var(--gray-100);
   background: linear-gradient(to right, #f2f2f2 8%, #f4f4f4 38%, #dedede 54%);
   background-size: 1000px 640px;
 
