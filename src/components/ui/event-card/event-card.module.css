@@ -2,7 +2,7 @@
   width: 100%;
   padding: 1.8em 2em;
   background-color: white;
-  border: 1px solid #e0e0e0;
+  border: 1px solid var(--gray-300);
   border-radius: 8px;
   transition: box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -13,7 +13,7 @@
 .event-card .title {
   margin: 0;
   margin-block-end: 1.2em;
-  color: var(--grey-400);
+  color: var(--gray-600);
   font-weight: 100;
   font-size: 1.618em;
 }
