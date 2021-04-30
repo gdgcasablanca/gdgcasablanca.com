@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - '12'
+  - '14'
 
 script:
   - yarn run build
@@ -11,7 +11,7 @@ install:
 # safelist
 branches:
   only:
-    - master
+    - main
     - develop
 jobs:
   include:
