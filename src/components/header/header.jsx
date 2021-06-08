@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import featureToggles from '../../config/toggles'
 import Link from '../link/link'
 import GDGCasaLogo from '../../images/logo-gdg.svg'
 import WTMCasaLogo from '../../images/logo-wtm.svg'
@@ -18,7 +17,7 @@ export const Header = ({ siteTitle }) => (
         <Link to='/'>Home</Link>
         <Link to='/#Events'>Events</Link>
         <Link to='/#Contact'>Contact</Link>
-        {featureToggles.teamPage && <Link to='/team'>Team</Link>}
+        <Link to='/team'>Team</Link>
         {/* <Link to="#!">About</Link>  */}
       </nav>
 
