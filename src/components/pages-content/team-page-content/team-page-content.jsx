@@ -9,7 +9,7 @@ import Text from '../../ui/text/text'
 
 const TeamPageContent = () => {
   const { data, error } = useSWR(
-    'https://gdgcasablanca-admin.vercel.app/api/members',
+    'https://gdgcasablanca-admin.vercel.app/api/members/published',
   )
 
   if (error)
